@@ -1,3 +1,3 @@
-# Team9_ReSprint
+# Team9 ReSprint
 Agile Project 
 CS555 
