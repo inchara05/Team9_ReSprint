@@ -1,0 +1,17 @@
+{
+  "name": "cs555-server",
+  "version": "1.0.0",
+  "description": "This is the server-side / backend for the cs555 final application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ReSprint",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.4.0"
+  }
+}
