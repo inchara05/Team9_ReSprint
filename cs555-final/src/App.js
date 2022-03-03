@@ -41,7 +41,7 @@ function App() {
       Welcome to the Balloon Burst Game!
     </div>
     <div>
-        <button onClick={startClick}>
+        <button class="button button1" onClick={startClick}>
           Tap to start
         </button>
       </div></>
