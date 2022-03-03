@@ -31,4 +31,44 @@ router.get('/', async(req,res) => {
         return;
 });
 
+router.post('/signup', async(req,res)=>{
+    try{
+        try{
+            let user = req.body.username;
+            let pass = req.body.password;
+            const newUser = await data.createUser(user ,pass);
+            if(newUser.userInserted){
+                res.redirect("/");
+            }
+        }
+        catch(e){
+            res.status(400).render("signup/signup", {"error":e});
+            return;
+        }
+    }
+       
+    catch(e){
+        res.status(500).json({error : "Internal server error"});
+    }
+});
+
+router.get('/signup', async(req,res) => {
+
+    try{
+        let session = req.session;
+        if(session['username']){
+            res.redirect("/private");
+            return;
+        }
+        else {
+           res.render("signup/signup") 
+           return;
+        }
+    }
+    catch(e){
+        res.render("signup/signup");
+        return;
+    }
+});
+
 module.exports = router;
