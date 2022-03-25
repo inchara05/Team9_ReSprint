@@ -18,3 +18,6 @@ How will this game improve our mental health?
 
 Since this game is sequential-based it makes one, think more than normal. This improves
 mathematical thinking and it helps reduce stress and gives relaxation to the mind.
+
+## Internal Details
+The app is built using React.js for the front-end, Node.js + Express for the back-end and handles user collection using MongoDB.
