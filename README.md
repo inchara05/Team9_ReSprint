@@ -17,3 +17,7 @@ leader board.
 How will this game improve our mental health?
 Since this game is sequential-based it makes one, think more than normal. This improves
 mathematical thinking and it helps reduce stress and gives relaxation to the mind.
+
+**How to Run**
+- npm install for installation
+- npm start to start the server the server will be running at localhost:3000
