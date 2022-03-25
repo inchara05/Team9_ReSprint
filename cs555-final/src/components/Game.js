@@ -4,15 +4,32 @@ import Balloon from "./Balloon";
 import { Grid, Chip, Button, Stack, Typography } from "@mui/material";
 
 const Game = () => {
+  const acceptedPumpSequence = [1, 2, 3, 4, 5];
+  const GROWTH_FACTOR = 0.02;
+  const SCORE_FACTOR = 5;
+  const INITIAL_WIDTH = "5%";
+  const TOTAL_BALLOONS = 31;
   const INITIAL_WIDTH = "5%";
   const [clicks, setClicks] = useState(0);
   //console.log(clicks);
   const [width, setWidth] = useState(INITIAL_WIDTH);
+  const [gameOver, setGameOver] = useState(false);
+  const [availableBalloons, setAvailableBalloons] = useState(TOTAL_BALLOONS);
 
   const [gotBalloon, setGotBalloon] = useState(0); // handle case of getting a new balloon without redeeming
   const [isBalloonAlive, setIsBalloonAlive] = useState(true);
   const [scoreForCurrentPump, setScoreForCurrentPump] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
+
+  useEffect(() => {
+    setAvailableBalloons(availableBalloons - 1);
+  }, [gotBalloon]);
+
+  useEffect(() => {
+    if (availableBalloons <= 0) {
+      setGameOver(true);
+    }
+  }, [availableBalloons]);
 
   const redeemPoints = () => {
     console.log(clicks);
