@@ -1,5 +1,5 @@
 # Team9 ReSprint
-Agile Project 
+## Agile Project 
 CS555 
 
 The aim of this game is to earn points by pumping up virtual balloons. The balloon will inflate
