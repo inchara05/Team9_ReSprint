@@ -15,5 +15,6 @@ sequence or pattern will automatically change with every game. Also, each level 
 leader board.
 
 How will this game improve our mental health?
+
 Since this game is sequential-based it makes one, think more than normal. This improves
 mathematical thinking and it helps reduce stress and gives relaxation to the mind.
