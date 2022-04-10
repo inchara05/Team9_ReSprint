@@ -9,7 +9,6 @@ const Game = () => {
   const SCORE_FACTOR = 5;
   const INITIAL_WIDTH = "5%";
   const TOTAL_BALLOONS = 31;
-  const INITIAL_WIDTH = "5%";
   const [clicks, setClicks] = useState(0);
   //console.log(clicks);
   const [width, setWidth] = useState(INITIAL_WIDTH);
