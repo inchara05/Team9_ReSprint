@@ -54,4 +54,47 @@ const Game = () => {
     setGotBalloon(gotBalloon + 1);
     setWidth("5%");
   };
+  
+  return (
+    <div>
+      {/* {Let's integrate the timer component later on.} */}
+      {!gameOver && (
+        <div>
+          <Timer timeUpHandler={resetCurrentBalloonState} />
+          <Grid style={{ paddingTop: "7%" }} container alignItems={"center"} justifyContent={"center"}>
+            <Stack direction="row" spacing={2}>
+              <Chip
+                style={{ backgroundColor: "blanchedalmond", margin: 6 }}
+                label={"Score acquired in this pump: " + 0}
+              />
+              <Chip style={{ backgroundColor: "blanchedalmond", margin: 6 }} label={"Total Score: " + 0} />
+              <Chip
+                style={{ backgroundColor: "blanchedalmond", margin: 6 }}
+                label={"Available Balloons: " + availableBalloons}
+              />
+            </Stack>
+          </Grid>{" "}
+          <Balloon
+            initWidth={width}
+            clicks={clicks}
+            // breakingPoint={balloonBreakingPoint}
+            resetCurrentBalloonState={resetCurrentBalloonState}
+            isBalloonAlive={isBalloonAlive}
+            // handleBalloonPump={handleBalloonPump}
+          />{" "}
+          <Grid container alignItems={"center"} justifyContent={"center"}>
+            <Button style={{ margin: 6 }} variant="outlined" onClick={redeemPoints}>
+              Redeem Points
+            </Button>
+            <Button style={{ margin: 6 }} variant="outlined" onClick={resetCurrentBalloonState}>
+              Oops, Get me a new balloon
+            </Button>
+          </Grid>
+        </div>
+      )}
+      {gameOver && <Typography variant="h1">Game Over!</Typography>}
+    </div>
+  );
 };
+
+export default Game;
