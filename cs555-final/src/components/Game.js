@@ -6,6 +6,9 @@ const axios = require("axios");
 
 const Game = () => {
   const TOTAL_BALLOONS = 31;
+  const [clicks, setClicks] = useState(0);
+  //console.log(clicks);
+  const [width, setWidth] = useState(INITIAL_WIDTH);
   const [gameOver, setGameOver] = useState(false);
   const [availableBalloons, setAvailableBalloons] = useState(TOTAL_BALLOONS);
   const [acceptedPumpSequence, setAcceptedPumpSequence] = useState([]);
