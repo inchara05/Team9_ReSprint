@@ -2,11 +2,16 @@ import { Typography, Card, Grid } from "@mui/material";
 import React from "react";
 import Countdown from "react-countdown";
 
-const Timer = ({ timeUpHandler }) => {
+const Timer = ({}) => {
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
-      timeUpHandler();
-      return <div>Time's up</div>;
+      return (
+        <Card>
+          <Grid container justifyContent={"center"}>
+            <Typography variant="h6">Time's Up. Reset the game to start a new session.</Typography>
+          </Grid>
+        </Card>
+      );
     } else {
       return (
         <Card>
