@@ -1,27 +1,32 @@
-import { Grid, Paper, Typography } from "@mui/material";
+import { Divider, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Instructions = (startClick) => {
   return (
     <div>
-      <Paper variant="outlined" elevation={12} style={{ backgroundColor: "grey" }}>
-        <Grid container alignContent={"center"} justifyContent={"center"}>
-          <Typography color={"blanchedalmond"} variant="h1" component="div" gutterBottom>
-            Welcome to Balloon Burst!
-          </Typography>
-        </Grid>
-        <div>
+      <Paper variant="outlined" elevation={12} style={{ backgroundColor: "#1b1b1e" }}>
+        <header className="App-header">
+          {" "}
+          <h1 className="header"> Welcome to Balloon Burst!</h1>
+        </header>
+        <div className="App-instruction">
           <ol>
+            <br />
             <p>
               A game Designed for toddlers. Here is the instruction to play the Game Play the magic balloon games for
-              toddlers and little kids as well as adults! Popping balloons and enjoy the joyful explosions. Babies can
-              pop the balloons on the screen, collect points and enjoy vivid colors and exciting animations! For
-              children with visual impairments such you can change the colour of the balloons in order to make them
-              easier to pop. All game modes are suitable for young kids as an educational game.{" "}
+              toddlers and little kids as well as adults!
+              <br />
+              <br />
+              Popping balloons and enjoy the joyful explosions. Babies can pop the balloons on the screen, collect
+              points and enjoy vivid colors and exciting animations! For children with visual impairments such you can
+              change the colour of the balloons in order to make them easier to pop. All game modes are suitable for
+              young kids as an educational game.{" "}
             </p>
+            <Divider className="divider" />
+            <br />
 
-            <Typography color={"blanchedalmond"} variant="h5" component="div" gutterBottom>
+            <Typography className="features" variant="h5" component="div" gutterBottom>
               {" "}
               FEATURES:{" "}
             </Typography>
@@ -52,7 +57,7 @@ const Instructions = (startClick) => {
             </p>
           </ol>
           <Grid container alignItems={"center"} justifyContent={"center"} style={{ padding: 20 }}>
-            <Link role={"button"} to={"/game"} className={"button button1"} onClick={startClick}>
+            <Link to={"/game"} className={"button button1"} onClick={startClick}>
               Tap to start
             </Link>
           </Grid>
